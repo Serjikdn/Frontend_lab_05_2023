@@ -26,7 +26,7 @@ function draw(arr){
     result.append(table);
 }
 
-function log(){
+function launch(){
     console.log(text.value);
     let arr = getArray(text);
     draw(arr);
