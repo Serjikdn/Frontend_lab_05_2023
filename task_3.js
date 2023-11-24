@@ -27,6 +27,5 @@ colors.forEach((element) => {
     element.addEventListener('click', () => {
         addColor(window.getComputedStyle(element).backgroundColor.toString());
         element.classList.toggle('selected');
-
     })
 });
