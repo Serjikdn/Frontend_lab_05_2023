@@ -10,7 +10,7 @@ function addColor(color) {
         selectColors.push(color);
     }
     console.log(selectColors);
-    showColor()
+    showColor();
 }
 
 function showColor(){
