@@ -4,7 +4,7 @@ const board = document.querySelectorAll('#board td');
 let selectedColor = null;
 
 colorBoxes.forEach((colorBox) => {
-    colorBox.addEventListener('click', (e) => {
+    colorBox.addEventListener('click', () => {
         colorBoxes.forEach((elem)=> elem.classList.remove('selected'));
         selectedColor = window.getComputedStyle(colorBox).backgroundColor.toString();
         colorBox.classList.add('selected');
