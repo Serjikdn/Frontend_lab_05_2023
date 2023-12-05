@@ -1,23 +1,74 @@
 body {
+    width: 980px;
+    margin: 0 auto;
     background-color: black;
-    color: green;
+    color: white;
 }
 
-.table {
-    border-collapse: collapse;
+.marquee-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #000;
+    color: #7fff00;
 }
 
-.table td, .table th {
-    border: 1px solid green;
-    padding: 3px;
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
 }
 
-.on-row{
+@keyframes marquee {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+main {
     display: flex;
-    flex-direction: row;
 }
 
-.size{
-    width: 20px;
-    height: 20px;
+section {
+    border: 1px solid darkgray;
+    width: 50%;
 }
+
+.task {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid rgb(128, 128, 128);
+    border-left: 3px solid rgb(128, 128, 128);
+    border-top: 3px solid rgb(128, 128, 128);
+    padding: 10px;
+    margin: 10px;
+    background-color: darkseagreen;
+    color: black;
+    text-decoration: none;
+}
+
+.task:active {
+    border-left: 1px solid rgb(128, 128, 128);
+    border-top: 1px solid rgb(128, 128, 128);
+    border-right: 3px solid rgb(128, 128, 128);
+    border-bottom: 3px solid rgb(128, 128, 128);
+}
+
+.result {
+    color: limegreen;
+    margin: auto;
+    /*padding: 34px;*/
+    position: absolute;
+}
+
+iframe {
+    width: 485px;
+    height: 526px;
+}
+
+
